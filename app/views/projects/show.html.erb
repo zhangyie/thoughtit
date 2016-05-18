@@ -61,13 +61,8 @@
             <td><%= p.cprogram %></td>
             <td><%= p.cthird %></td>
             <td><%= p.ckingdee %></td>
-            <table>
-                <td><strong>合同备注：</strong></td>
-                <td><%= p.cmemo %></td>
-            </table>
-        </tr>
+            <td><%=  link_to "增加收款计划", @project, class: "btn btn-sm" %></td>
+         </tr>
     </tbody>
 <% end %>
 </table>
-<br>
-<%=  link_to "增加收款计划", @project, class: "btn btn-primary" %>
