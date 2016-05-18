@@ -1,0 +1,14 @@
+**开发笔记
+** 程序已经生成
+thoughtit
+** 生成项目模块
+*** project --项目名称:ptitle,pcustom,ptype项目类型（服务费、实施、产品）, pprice,pdate,psales,psource,pstate项目阶段
+*** project作为此项目中的唯一标示，合同、收款、阶段等都依存于此表，标示为project_id
+*** 修改project的名称和显示
+** 生成合同模块
+*** 隶属于项目模块
+*** 需要crud，使用scaffold
+*** contract，project_id,ctitle,cbegin,cend,cproduct,cservice,cimplement,cprogram,cthird,ckingdee,cmemo
+** 生成主页面链接
+*** 使用bootstrap
+*** 使用导航栏navbar

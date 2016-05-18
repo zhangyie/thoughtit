@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  ctitle: MyString
+  cbegin: 2016-05-16
+  cend: 2016-05-16
+  cproduct: 1.5
+  cservice: 1.5
+  cimplement: 1.5
+  cprogram: 1.5
+  cthird: 1.5
+  ckingdee: MyString
+  cmemo: MyText
+
+two:
+  project_id: 
+  ctitle: MyString
+  cbegin: 2016-05-16
+  cend: 2016-05-16
+  cproduct: 1.5
+  cservice: 1.5
+  cimplement: 1.5
+  cprogram: 1.5
+  cthird: 1.5
+  ckingdee: MyString
+  cmemo: MyText

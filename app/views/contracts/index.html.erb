@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Contracts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Ctitle</th>
+      <th>Cbegin</th>
+      <th>Cend</th>
+      <th>Cproduct</th>
+      <th>Cservice</th>
+      <th>Cimplement</th>
+      <th>Cprogram</th>
+      <th>Cthird</th>
+      <th>Ckingdee</th>
+      <th>Cmemo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contracts.each do |contract| %>
+      <tr>
+        <td><%= contract.project %></td>
+        <td><%= contract.ctitle %></td>
+        <td><%= contract.cbegin %></td>
+        <td><%= contract.cend %></td>
+        <td><%= contract.cproduct %></td>
+        <td><%= contract.cservice %></td>
+        <td><%= contract.cimplement %></td>
+        <td><%= contract.cprogram %></td>
+        <td><%= contract.cthird %></td>
+        <td><%= contract.ckingdee %></td>
+        <td><%= contract.cmemo %></td>
+        <td><%= link_to 'Show', project_contract %></td>
+        <td><%= link_to 'Edit', edit_project_contract_path(contract) %></td>
+        <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contract', new_project_contract_path %>

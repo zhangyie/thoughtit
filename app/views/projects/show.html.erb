@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<table  class="table table-hover">
+    <thead>
+        <tr>
+            <th>项目名称</th>
+            <th>客户名称</th>
+            <th>项目类型</th>
+            <th>项目金额</th>
+            <th>预计完成日期</th>
+            <th>负责人</th>
+            <th>项目来源</th>
+            <th>项目阶段</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+            <tr>
+                <td><%= @project.ptitle %></td>
+                <td><%= @project.pcustom %></td>
+                <td><%= @project.ptype %></td>
+                <td><%= @project.pprice %></td>
+                <td><%= @project.pdate %></td>
+                <td><%= @project.psales %></td>
+                <td><%= @project.psource %></td>
+                <td><%= @project.pstate %></td>
+            </tr>
+    </tbody>
+</table>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
+<%= link_to '增加合同', new_project_contract_path(@project) %>
+<h2>合同列表</h2>
+<table  class="table table-hover">
+    <thead>
+        <tr>
+            <th>合同名称</th>
+            <th>开始时间</th>
+            <th>结束时间</th>
+            <th>产品金额</th>
+            <th>服务金额</th>
+            <th>实施金额</th>
+            <th>开发金额</th>
+            <th>第三方金额</th>
+            <th>金蝶产品名称</th>
+
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+
+<% @project.contracts.each do |p| %>
+    <tbody>
+        <tr>
+            <td><%= p.ctitle %></td>
+            <td><%= p.cbegin %></td>
+            <td><%= p.cend %></td>
+            <td><%= p.cproduct %></td>
+            <td><%= p.cservice %></td>
+            <td><%= p.cimplement %></td>
+            <td><%= p.cprogram %></td>
+            <td><%= p.cthird %></td>
+            <td><%= p.ckingdee %></td>
+            <table>
+                <td><strong>合同备注：</strong></td>
+                <td><%= p.cmemo %></td>
+            </table>
+        </tr>
+    </tbody>
+<% end %>
+</table>
+<br>
+<%=  link_to "增加收款计划", @project, class: "btn btn-primary" %>

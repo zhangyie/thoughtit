@@ -1,0 +1,57 @@
+<%= form_for [ @project,  @contract ] do |f| %>
+  <% if @contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+
+      <ul>
+      <% @contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :合同名称 %><br>
+    <%= f.text_field :ctitle %>
+  </div>
+  <div class="field">
+    <%= f.label :开始时间 %><br>
+    <%= f.date_select :cbegin %>
+  </div>
+  <div class="field">
+    <%= f.label :结束时间 %><br>
+    <%= f.date_select :cend %>
+  </div>
+  <div class="field">
+    <%= f.label :产品金额 %><br>
+    <%= f.text_field :cproduct %>
+  </div>
+  <div class="field">
+    <%= f.label :服务金额 %><br>
+    <%= f.text_field :cservice %>
+  </div>
+  <div class="field">
+    <%= f.label :实施金额 %><br>
+    <%= f.text_field :cimplement %>
+  </div>
+  <div class="field">
+    <%= f.label :开发金额 %><br>
+    <%= f.text_field :cprogram %>
+  </div>
+  <div class="field">
+    <%= f.label :第三方金额 %><br>
+    <%= f.text_field :cthird %>
+  </div>
+  <div class="field">
+    <%= f.label :金蝶产品 %><br>
+    <%= f.text_field :ckingdee %>
+  </div>
+  <div class="field">
+    <%= f.label :备注 %><br>
+    <%= f.text_area :cmemo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

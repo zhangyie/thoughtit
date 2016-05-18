@@ -1,0 +1,44 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.label :名称 %>
+    <%= f.text_field :ptitle, class: "form-control" %>
+    <%= f.label :客户名称 %>
+    <%= f.text_field :pcustom, class: "form-control"  %>
+  <div class="field">
+    <%= f.label :项目类型 %><br>
+    <%= f.text_field :ptype %>
+  </div>
+  <div class="field">
+    <%= f.label :预计金额 %><br>
+    <%= f.text_field :pprice %>
+  </div>
+  <div class="field">
+    <%= f.label :预计时间 %><br>
+    <%= f.date_select :pdate %>
+  </div>
+  <div class="field">
+    <%= f.label :负责人 %><br>
+    <%= f.text_field :psales %>
+  </div>
+  <div class="field">
+    <%= f.label :来源 %><br>
+    <%= f.text_field :psource %>
+  </div>
+  <div class="field">
+    <%= f.label :状态 %><br>
+    <%= f.text_field :pstate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
