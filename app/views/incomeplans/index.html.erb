@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Incomeplans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contract</th>
+      <th>Ititle</th>
+      <th>Iprice</th>
+      <th>Idate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incomeplans.each do |incomeplan| %>
+      <tr>
+        <td><%= incomeplan.contract %></td>
+        <td><%= incomeplan.ititle %></td>
+        <td><%= incomeplan.iprice %></td>
+        <td><%= incomeplan.idate %></td>
+        <td><%= link_to 'Show', incomeplan %></td>
+        <td><%= link_to 'Edit', edit_incomeplan_path(incomeplan) %></td>
+        <td><%= link_to 'Destroy', incomeplan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Incomeplan', new_incomeplan_path %>

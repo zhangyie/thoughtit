@@ -1,0 +1,33 @@
+<%= form_for(@incomeplan) do |f| %>
+  <% if @incomeplan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@incomeplan.errors.count, "error") %> prohibited this incomeplan from being saved:</h2>
+
+      <ul>
+      <% @incomeplan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :contract_id %><br>
+    <%= f.text_field :contract_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ititle %><br>
+    <%= f.text_field :ititle %>
+  </div>
+  <div class="field">
+    <%= f.label :iprice %><br>
+    <%= f.text_field :iprice %>
+  </div>
+  <div class="field">
+    <%= f.label :idate %><br>
+    <%= f.date_select :idate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

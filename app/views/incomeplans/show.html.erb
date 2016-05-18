@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @incomeplan.contract %>
+</p>
+
+<p>
+  <strong>Ititle:</strong>
+  <%= @incomeplan.ititle %>
+</p>
+
+<p>
+  <strong>Iprice:</strong>
+  <%= @incomeplan.iprice %>
+</p>
+
+<p>
+  <strong>Idate:</strong>
+  <%= @incomeplan.idate %>
+</p>
+
+<%= link_to 'Edit', edit_incomeplan_path(@incomeplan) %> |
+<%= link_to 'Back', incomeplans_path %>
